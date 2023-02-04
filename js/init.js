@@ -3,7 +3,7 @@ function initializeAppSideBar() {
 }
 
 // Layout initialization
-function initializeAppLayout() {
+function initializeAppTopologyLayout() {
     appLayout = appSideBar.cells("topology_view").attachLayout({
         pattern: APP_PATTERN,
     });
@@ -13,25 +13,25 @@ function initializeAppLayout() {
 }
 
 // initialize app side cell
-function initializeAppSideCell() {
+function initializeAppTopologySideCell() {
     appSideCell.hideHeader();
     appSideCell.setWidth(300);
 }
 
 // initialize app graph cell
-function initializeAppGraphCell() {
+function initializeAppTopologyGraphCell() {
     appGraphCell.hideHeader();
     appGraphCell.attachObject("graph");
 }
 
 // initialize app ribbon
-function initializeAppRibbon() {
+function initializeAppTopologyRibbon() {
     appRibbon = appLayout.attachRibbon(APP_RIBBON_CONFIG);
     appRibbon.attachEvent("onClick", appRibbonOnClickHandler);
 }
 
 // initialize app graph
-function initializeAppGraph() {
+function initializeAppTopologyGraph() {
     appGraph = cytoscape({
         container: document.getElementById("graph")
     })

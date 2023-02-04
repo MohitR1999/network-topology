@@ -2,19 +2,19 @@
 initializeAppSideBar();
 
 // Initialize layout
-initializeAppLayout();
+initializeAppTopologyLayout();
 
 // initialize side cell
-initializeAppSideCell();
+initializeAppTopologySideCell();
 
 // intialize graph cell
-initializeAppGraphCell();
+initializeAppTopologyGraphCell();
 
 // initialize ribbon
-initializeAppRibbon();
+initializeAppTopologyRibbon();
 
 // initialize graph
-initializeAppGraph();
+initializeAppTopologyGraph();
 
 // initialize node addition window
 initializeAppNodeAdditionWindow();
