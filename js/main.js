@@ -1,3 +1,6 @@
+// initialize side bar
+initializeAppSideBar();
+
 // Initialize layout
 initializeAppLayout();
 
@@ -15,3 +18,6 @@ initializeAppGraph();
 
 // initialize node addition window
 initializeAppNodeAdditionWindow();
+
+// initialize node addition form
+initializeAppNodeAdditionForm();

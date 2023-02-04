@@ -1,5 +1,39 @@
+const BASE_URL = 'http://localhost:3000'
+const SOCKET_URL = 'http://localhost:9000'
 const APP_PARENT_DIV = "root";
 const APP_PATTERN = "2U";
+const APP_SIDEBAR_CONFIG = {
+    parent : APP_PARENT_DIV,
+    template : "tiles",
+    header : true,
+    autohide : true,
+    items : [
+        {
+            id : "topology_view",
+            text : "Topology View",
+            icon : "res/icons/hub_filled.svg",
+            selected : true
+        },
+
+        {
+            id : "manage_nodes",
+            text : "Manage Nodes",
+            icon : "res/icons/spoke_fill.svg",
+        },
+
+        {
+            id : "manage_tl",
+            text : "Manage TLs",
+            icon : "res/icons/lan_filled.svg",
+        },
+
+        {
+            id : "manage_services",
+            text : "Manage Services",
+            icon : "res/icons/settings_ethernet_fill.svg",
+        }
+    ]
+};
 const APP_RIBBON_CONFIG = {
     tabs: [
         {
@@ -53,8 +87,29 @@ const APP_RIBBON_CONFIG = {
             id: "view",
             text: "View",
             items: [
-                
+
             ]
         }
     ]
 }
+
+const APP_NODE_ADDITION_WINDOW_PROPS = {
+    X : 300,
+    Y : 100,
+    WIDTH : 350,
+    HEIGHT : 250
+}
+
+const APP_NODE_ADDITION_FORM_CONFIG = [
+    {
+        type : "settings", position: "label-top", inputWidth : 300
+    },
+    
+    {
+        type: "block", name: "data",
+        list: [
+            { type: "input", name: "ip", label: "IP Address:", required : true },
+            { type: "button", name: "proceed", value: "Proceed" }
+        ]
+    }
+]
