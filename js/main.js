@@ -12,3 +12,6 @@ initializeAppRibbon();
 
 // initialize graph
 initializeAppGraph();
+
+// initialize node addition window
+initializeAppNodeAdditionWindow();
