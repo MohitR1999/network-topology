@@ -9,3 +9,6 @@ initializeAppGraphCell();
 
 // initialize ribbon
 initializeAppRibbon();
+
+// initialize graph
+initializeAppGraph();

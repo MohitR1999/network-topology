@@ -18,9 +18,17 @@ function initializeAppSideCell() {
 // initialize app graph cell
 function initializeAppGraphCell() {
     appGraphCell.hideHeader();
+    appGraphCell.attachObject("graph");
 }
 
 // initialize app ribbon
 function initializeAppRibbon() {
     appRibbon = appLayout.attachRibbon(APP_RIBBON_CONFIG);
+}
+
+// initialize app graph
+function initializeAppGraph() {
+    appGraph = cytoscape({
+        container: document.getElementById("graph")
+    })
 }
