@@ -6,3 +6,6 @@ initializeAppSideCell();
 
 // intialize graph cell
 initializeAppGraphCell();
+
+// initialize ribbon
+initializeAppRibbon();

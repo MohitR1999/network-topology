@@ -1,8 +1,8 @@
 // Layout initialization
 function initializeAppLayout() {
     appLayout = new dhtmlXLayoutObject({
-        parent : APP_PARENT_DIV,
-        pattern : APP_PATTERN,
+        parent: APP_PARENT_DIV,
+        pattern: APP_PATTERN,
     });
     appSideCell = appLayout.cells("a");
     appGraphCell = appLayout.cells("b");
@@ -18,4 +18,9 @@ function initializeAppSideCell() {
 // initialize app graph cell
 function initializeAppGraphCell() {
     appGraphCell.hideHeader();
+}
+
+// initialize app ribbon
+function initializeAppRibbon() {
+    appRibbon = appLayout.attachRibbon(APP_RIBBON_CONFIG);
 }
