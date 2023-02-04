@@ -133,6 +133,50 @@ const APP_MANAGE_NODES_RIBBON_CONFIG = {
     ]
 }
 
+const APP_MANAGE_NODES_GRID_PROPS = {
+    columns : [
+        {
+            id : "ip",
+            width : '*',
+            type : "ro",
+            value : "IP Address",
+            filter : "#text_filter"
+        },
+
+        {
+            id : "label",
+            width : '*',
+            type : "ro",
+            value : "Node label",
+            filter : "#text_filter"
+        },
+
+        {
+            id : "availability",
+            width : '*',
+            type : "ro",
+            value : "Availability Status",
+            filter : "#text_filter"
+        },
+
+        {
+            id : "nms_sync",
+            width : '*',
+            type : "ro",
+            value : "NMS Sync State",
+            filter : "#text_filter"
+        },
+
+        {
+            id : "ems_sync",
+            width : '*',
+            type : "ro",
+            value : "EMS Sync State",
+            filter : "#text_filter"
+        }
+    ]
+}
+
 const APP_NODE_ADDITION_WINDOW_PROPS = {
     X : 300,
     Y : 100,

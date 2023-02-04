@@ -4,6 +4,12 @@ function appRibbonOnClickHandler(itemId) {
     }
 }
 
+function appManageNodesRibbonOnClickHandler(itemId) {
+    if (itemId == "add_node") {
+        appNodeAdditionWindow.show();
+    }
+}
+
 function appNodeAdditionFormOnButtonClickHandler(name) {
     if (name == "proceed") {
         const ipAddress = appNodeAdditionForm.getItemValue("ip");
@@ -21,7 +27,7 @@ function appNodeAdditionFormOnButtonClickHandler(name) {
                 body: JSON.stringify(requestBody)
             }).then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    appManageNodesGridDataStore.add(data);
                     // reset the values and close the window
                     appNodeAdditionWindow.progressOff();
                     appNodeAdditionForm.setItemValue("ip", "");

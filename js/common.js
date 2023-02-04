@@ -12,6 +12,8 @@ let appNodeAdditionForm = null;
 let appManageNodesLayout = null;
 let appManageNodesBodyCell = null;
 let appManageNodesRibbon = null;
+let appManageNodesGrid = null;
+let appManageNodesGridDataStore = null;
 
 // manage TL page constants
 let appManageTlLayout = null;

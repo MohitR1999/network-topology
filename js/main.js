@@ -31,8 +31,20 @@ initializeAppManageNodesRibbon();
 // initialize graph
 initializeAppTopologyGraph();
 
+// initialize manage nodes grid datastore
+initializeAppManageNodesGridDataStore();
+
+// initialize manage nodes grid
+initializeAppManageNodesGrid();
+
 // initialize node addition window
 initializeAppNodeAdditionWindow();
 
 // initialize node addition form
 initializeAppNodeAdditionForm();
+
+
+/**
+ * Population logic starts here
+ */
+populateAppManageNodesDataStore();

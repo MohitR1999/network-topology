@@ -51,8 +51,10 @@ function initializeAppManageNodesBodyCell() {
     appManageNodesBodyCell.hideHeader();
 }
 
+// initialize manage nodes ribbon
 function initializeAppManageNodesRibbon() {
     appManageNodesRibbon = appManageNodesLayout.attachRibbon(APP_MANAGE_NODES_RIBBON_CONFIG);
+    appManageNodesRibbon.attachEvent("onClick", appManageNodesRibbonOnClickHandler);
 }
 
 // initialize app ribbon
@@ -66,6 +68,22 @@ function initializeAppTopologyGraph() {
     appGraph = cytoscape({
         container: document.getElementById("graph")
     })
+}
+
+// initialize manage nodes grid
+function initializeAppManageNodesGrid() {
+    appManageNodesGrid = appManageNodesBodyCell.attachGrid();
+    appManageNodesGrid.setHeader(APP_MANAGE_NODES_GRID_PROPS.columns.map(element => element.value).join(","));
+    appManageNodesGrid.attachHeader(APP_MANAGE_NODES_GRID_PROPS.columns.map(element => element.filter).join(","));
+    appManageNodesGrid.setColumnIds(APP_MANAGE_NODES_GRID_PROPS.columns.map(element => element.id).join(","));
+    appManageNodesGrid.setInitWidths(APP_MANAGE_NODES_GRID_PROPS.columns.map(element => element.width).join(","));
+    appManageNodesGrid.init();
+    appManageNodesGrid.sync(appManageNodesGridDataStore);
+}
+
+// initialize manage nodes grid datastore
+function initializeAppManageNodesGridDataStore() {
+    appManageNodesGridDataStore = new dhtmlXDataStore();
 }
 
 // initialize node addition window
