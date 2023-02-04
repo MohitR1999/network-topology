@@ -15,13 +15,13 @@ const APP_SIDEBAR_CONFIG = {
             id : "topology_view",
             text : "Topology View",
             icon : "res/icons/hub_filled.svg",
-            selected : true
         },
-
+        
         {
             id : "manage_nodes",
             text : "Manage Nodes",
             icon : "res/icons/spoke_fill.svg",
+            selected : true
         },
 
         {
@@ -37,7 +37,7 @@ const APP_SIDEBAR_CONFIG = {
         }
     ]
 };
-const APP_RIBBON_CONFIG = {
+const APP_TOPOLOGY_VIEW_RIBBON_CONFIG = {
     tabs: [
         {
             id: "home",
@@ -91,6 +91,43 @@ const APP_RIBBON_CONFIG = {
             text: "View",
             items: [
 
+            ]
+        }
+    ]
+}
+
+const APP_MANAGE_NODES_RIBBON_CONFIG = {
+    tabs: [
+        {
+            id: "file",
+            text: "File",
+            active: true,
+            items: [
+                {
+                    type: "block", text: "General", list: [
+                        {
+                            id: "add_node", type: "button", text: "Add Node", isbig: true, img: "res/icons/add_circle.svg", imgdis: "res/icons/add_circle.svg"
+                        },
+                        {
+                            id: "delete_node", type: "button", text: "Delete Node", isbig: true, img: "res/icons/delete_circle.svg", imgdis: "res/icons/delete_circle.svg"
+                        }
+                    ]
+                },
+
+                {
+                    type: "block", text: "Manage Properties", list: [
+
+                        {
+                            id: "view_rings", type: "button", text: "View Rings on TL", img: "res/icons/hub.svg", imgdis: "res/icons/hub.svg"
+                        },
+                        {
+                            id: "view_optical_power_report", type: "button", text: "View Optical Power Report", img: "res/icons/analytics.svg", imgdis: "res/icons/analytics.svg"
+                        },
+                        {
+                            id: "view_tl_bw", type: "button", text: "View TL Bandwidth Utilization", img: "res/icons/bar_chart.svg", imgdis: "res/icons/bar_chart.svg"
+                        },
+                    ]
+                }
             ]
         }
     ]

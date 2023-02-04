@@ -19,8 +19,14 @@ initializeAppTopologySideCell();
 // intialize graph cell
 initializeAppTopologyGraphCell();
 
+// initialize manage nodes body cell
+initializeAppManageNodesBodyCell();
+
 // initialize ribbon
 initializeAppTopologyRibbon();
+
+// initialize manage nodes ribbon
+initializeAppManageNodesRibbon();
 
 // initialize graph
 initializeAppTopologyGraph();

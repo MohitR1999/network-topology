@@ -10,6 +10,8 @@ let appNodeAdditionForm = null;
 
 // manage node page constants
 let appManageNodesLayout = null;
+let appManageNodesBodyCell = null;
+let appManageNodesRibbon = null;
 
 // manage TL page constants
 let appManageTlLayout = null;

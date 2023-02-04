@@ -17,18 +17,19 @@ function initializeAppManageNodesLayout() {
     appManageNodesLayout = appSideBar.cells("manage_nodes").attachLayout({
         pattern: APP_MANAGE_NODES_PATTERN,
     });
+    appManageNodesBodyCell = appManageNodesLayout.cells("a");
 }
 
 // initialize manage nodes layout
 function initializeAppManageTlLayout() {
-    appManageNodesLayout = appSideBar.cells("manage_tl").attachLayout({
+    appManageTlLayout = appSideBar.cells("manage_tl").attachLayout({
         pattern: APP_MANAGE_NODES_PATTERN,
     });
 }
 
 // initialize manage nodes layout
 function initializeAppManageServicesLayout() {
-    appManageNodesLayout = appSideBar.cells("manage_services").attachLayout({
+    appManageServicesLayout = appSideBar.cells("manage_services").attachLayout({
         pattern: APP_MANAGE_NODES_PATTERN,
     });
 }
@@ -45,9 +46,18 @@ function initializeAppTopologyGraphCell() {
     appGraphCell.attachObject("graph");
 }
 
+// initialize manage nodes body cell
+function initializeAppManageNodesBodyCell() {
+    appManageNodesBodyCell.hideHeader();
+}
+
+function initializeAppManageNodesRibbon() {
+    appManageNodesRibbon = appManageNodesLayout.attachRibbon(APP_MANAGE_NODES_RIBBON_CONFIG);
+}
+
 // initialize app ribbon
 function initializeAppTopologyRibbon() {
-    appRibbon = appLayout.attachRibbon(APP_RIBBON_CONFIG);
+    appRibbon = appLayout.attachRibbon(APP_TOPOLOGY_VIEW_RIBBON_CONFIG);
     appRibbon.attachEvent("onClick", appRibbonOnClickHandler);
 }
 
