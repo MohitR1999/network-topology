@@ -12,7 +12,7 @@ function initializeAppLayout() {
 // initialize app side cell
 function initializeAppSideCell() {
     appSideCell.hideHeader();
-    appSideCell.setWidth(350);
+    appSideCell.setWidth(300);
 }
 
 // initialize app graph cell
