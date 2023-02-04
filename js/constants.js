@@ -2,6 +2,9 @@ const BASE_URL = 'http://localhost:3000'
 const SOCKET_URL = 'http://localhost:9000'
 const APP_PARENT_DIV = "root";
 const APP_PATTERN = "2U";
+const APP_MANAGE_NODES_PATTERN = "1C";
+const APP_MANAGE_TL_PATTERN = "1C";
+const APP_MANAGE_SERVICES_PATTERN = "1C";
 const APP_SIDEBAR_CONFIG = {
     parent : APP_PARENT_DIV,
     template : "tiles",

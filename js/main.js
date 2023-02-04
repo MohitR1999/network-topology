@@ -4,6 +4,15 @@ initializeAppSideBar();
 // Initialize layout
 initializeAppTopologyLayout();
 
+// initialize manage nodes page
+initializeAppManageNodesLayout();
+
+// initialize manage TLs page
+initializeAppManageTlLayout();
+
+// initialize manage services page
+initializeAppManageServicesLayout();
+
 // initialize side cell
 initializeAppTopologySideCell();
 

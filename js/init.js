@@ -12,6 +12,27 @@ function initializeAppTopologyLayout() {
     appLayout.setSeparatorSize(0, 0);
 }
 
+// initialize manage nodes layout
+function initializeAppManageNodesLayout() {
+    appManageNodesLayout = appSideBar.cells("manage_nodes").attachLayout({
+        pattern: APP_MANAGE_NODES_PATTERN,
+    });
+}
+
+// initialize manage nodes layout
+function initializeAppManageTlLayout() {
+    appManageNodesLayout = appSideBar.cells("manage_tl").attachLayout({
+        pattern: APP_MANAGE_NODES_PATTERN,
+    });
+}
+
+// initialize manage nodes layout
+function initializeAppManageServicesLayout() {
+    appManageNodesLayout = appSideBar.cells("manage_services").attachLayout({
+        pattern: APP_MANAGE_NODES_PATTERN,
+    });
+}
+
 // initialize app side cell
 function initializeAppTopologySideCell() {
     appSideCell.hideHeader();

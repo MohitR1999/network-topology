@@ -7,3 +7,12 @@ let appGraph = null;
 let appNodeAdditionWindow = null;
 let appNodeAdditionWindowStatusBar = null;
 let appNodeAdditionForm = null;
+
+// manage node page constants
+let appManageNodesLayout = null;
+
+// manage TL page constants
+let appManageTlLayout = null;
+
+// manage services page constants
+let appManageServicesLayout = null;
