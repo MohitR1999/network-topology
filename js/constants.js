@@ -16,6 +16,17 @@ const APP_RIBBON_CONFIG = {
                 },
 
                 {
+                    type: "block", text: "Manage Nodes", list: [
+                        {
+                            id: "add_node", type: "button", text: "Add Node", isbig: true, img: "res/icons/add_circle.svg", imgdis: "res/icons/add_circle.svg"
+                        },
+                        {
+                            id: "delete_node", type: "button", text: "Delete Node", isbig: true, img: "res/icons/delete_circle.svg", imgdis: "res/icons/delete_circle.svg"
+                        }
+                    ]
+                },
+
+                {
                     type: "block", text: "Manage Links", list: [
                         {
                             id: "create_tl", type: "button", text: "Create TL", isbig: true, img: "res/icons/add.svg", imgdis: "res/icons/add.svg"
