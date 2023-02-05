@@ -66,8 +66,38 @@ function initializeAppTopologyRibbon() {
 // initialize app graph
 function initializeAppTopologyGraph() {
     appGraph = cytoscape({
-        container: document.getElementById("graph")
-    })
+        container: document.getElementById("graph"),
+        style : [
+            {
+                selector : 'node',
+                style : {
+                    'background-color' : '#ccc',
+                    'label' : 'data(label)',
+                    'border-color' : '#000',
+                    'border-width' : '2px',
+                }
+            },
+
+            {
+                selector : ':selected',
+                style : {
+                    'background-color' : '#1B9CFC',
+                }
+            }
+        ]
+    });
+}
+
+// initialize topology view side grid
+function initializeAppTopologyViewNodesGrid() {
+    appTopologySideGrid = appSideCell.attachGrid();
+    appTopologySideGrid.setHeader(APP_TOPOLOGY_VIEW_GRID_PROPS.columns.map(element => element.value).join(","));
+    appTopologySideGrid.attachHeader(APP_TOPOLOGY_VIEW_GRID_PROPS.columns.map(element => element.filter).join(","));
+    appTopologySideGrid.setColumnIds(APP_TOPOLOGY_VIEW_GRID_PROPS.columns.map(element => element.id).join(","));
+    appTopologySideGrid.setInitWidths(APP_TOPOLOGY_VIEW_GRID_PROPS.columns.map(element => element.width).join(","));
+    appTopologySideGrid.init();
+    appTopologySideGrid.sync(appManageNodesGridDataStore);
+    appTopologySideGrid.attachEvent("onRowSelect", appTopologyViewSideGridOnRowSelectHandler);
 }
 
 // initialize manage nodes grid

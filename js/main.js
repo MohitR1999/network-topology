@@ -34,6 +34,9 @@ initializeAppTopologyGraph();
 // initialize manage nodes grid datastore
 initializeAppManageNodesGridDataStore();
 
+// initialize topology view side cell
+initializeAppTopologyViewNodesGrid();
+
 // initialize manage nodes grid
 initializeAppManageNodesGrid();
 
@@ -48,3 +51,5 @@ initializeAppNodeAdditionForm();
  * Population logic starts here
  */
 populateAppManageNodesDataStore();
+populateAppTopologyViewGraph();
+

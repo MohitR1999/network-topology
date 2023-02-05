@@ -7,6 +7,7 @@ let appGraph = null;
 let appNodeAdditionWindow = null;
 let appNodeAdditionWindowStatusBar = null;
 let appNodeAdditionForm = null;
+let appTopologySideGrid = null;
 
 // manage node page constants
 let appManageNodesLayout = null;

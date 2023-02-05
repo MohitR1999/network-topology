@@ -46,3 +46,8 @@ function appNodeAdditionFormOnButtonClickHandler(name) {
         }
     }
 }
+
+function appTopologyViewSideGridOnRowSelectHandler(id, index) {
+    const ip = appManageNodesGridDataStore.item(id).ip;
+    appGraph.getElementById(ip).select();
+}

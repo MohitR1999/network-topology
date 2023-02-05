@@ -15,13 +15,13 @@ const APP_SIDEBAR_CONFIG = {
             id : "topology_view",
             text : "Topology View",
             icon : "res/icons/hub_filled.svg",
+            selected : true
         },
         
         {
             id : "manage_nodes",
             text : "Manage Nodes",
             icon : "res/icons/spoke_fill.svg",
-            selected : true
         },
 
         {
@@ -172,6 +172,26 @@ const APP_MANAGE_NODES_GRID_PROPS = {
             width : '*',
             type : "ro",
             value : "EMS Sync State",
+            filter : "#text_filter"
+        }
+    ]
+}
+
+const APP_TOPOLOGY_VIEW_GRID_PROPS = {
+    columns : [
+        {
+            id : "ip",
+            width : '*',
+            type : "ro",
+            value : "IP Address",
+            filter : "#text_filter"
+        },
+
+        {
+            id : "label",
+            width : '*',
+            type : "ro",
+            value : "Node label",
             filter : "#text_filter"
         }
     ]
