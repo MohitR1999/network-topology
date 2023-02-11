@@ -53,3 +53,29 @@ initializeAppNodeAdditionForm();
 populateAppManageNodesDataStore();
 populateAppTopologyViewGraph();
 
+const wizardConfig = {
+    id : "createBGP",
+}
+
+const wizardItems = [
+    {
+        id : "general_attributes",
+        text : "General Attributes",
+        icon : "res/icons/add_circle.svg",
+    },
+
+    {
+        id : "endpoint_selection",
+        text : "End Point Selection",
+        icon : "res/icons/add.svg"
+    },
+
+    {
+        id : "topology_selection",
+        text : "Topology Selection",
+        icon : "res/icons/hub.svg"
+    }
+]
+
+let wizard = new Wizard("Create BGP", wizardConfig, wizardItems);
+

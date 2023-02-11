@@ -1,5 +1,5 @@
-const BASE_URL = 'http://localhost:3000'
-const SOCKET_URL = 'http://localhost:9000'
+const BASE_URL = 'http://192.168.1.8:3000'
+const SOCKET_URL = 'http://192.168.1.8:9000'
 const APP_PARENT_DIV = "root";
 const APP_PATTERN = "2U";
 const APP_MANAGE_NODES_PATTERN = "1C";
@@ -33,6 +33,12 @@ const APP_SIDEBAR_CONFIG = {
         {
             id : "manage_services",
             text : "Manage Services",
+            icon : "res/icons/settings_ethernet_fill.svg",
+        },
+
+        {
+            id : "manage_bgp_config",
+            text : "BGP Configurations",
             icon : "res/icons/settings_ethernet_fill.svg",
         }
     ]
