@@ -1,19 +1,27 @@
 class WizardPage {
     /**
-     * 
-     * @param {String} id Unique id of the wizard page 
-     * @param {String} text title of the wizard page to be displayed in the sidebar
-     * @param {String} icon icon to be used in the sidebar
-     * @param {String} parent ID of the HTML element that would contain all the content of the wizard page
-     * @param {Function} next Validation function to be run on clicking next
-     * @param {Function} previous Optional function to be run on clicking previous
+     * Returns a wizard page
+     * @param {String} id ID of the wizard page
+     * @param {Object} parent Parent carousel cell object
      */
-    constructor(id, text, icon, parent, next, previous) {
+    constructor(id, parent) {
         this.id = id;
-        this.text = text;
-        this.icon = icon;
         this.parent = parent;
-        this.next = next;
-        this.previous = previous;
+    }
+
+    /**
+     * Validation function for the wizard page, to be overridden by respective pages
+     * @returns {Boolean} whether the validation was successful or not
+     */
+    next() {
+        return true;
+    }
+
+    /**
+     * Function to be called when previous button is clicked
+     * @returns {Boolean} whether we can navigate to the previous page or not
+     */
+    previous() {
+        return true;
     }
 }

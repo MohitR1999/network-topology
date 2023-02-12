@@ -23,3 +23,8 @@ body,
     height: 100%;
     overflow: hidden;
 }
+
+.align_right {
+    align-items: end;
+    background-color: rgb(230, 89, 23);
+}
