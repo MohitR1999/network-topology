@@ -20,7 +20,6 @@ class Wizard {
         this.title = title;
         this.wizardWindow = null;
         this._itemsMap = items.reduce((accumulator, current) => {
-            let object = current;
             accumulator[`${current.id}`] = {...current};
             return accumulator;
         }, {});
@@ -75,7 +74,6 @@ class Wizard {
         this.contentCarousel.hideControls();
         for(let i = 0; i < items.length; i++) {
             this.contentCarousel.addCell(items[i].id, i);
-            this.contentCarousel.cells(items[i].id).attachHTMLString(`<p>${items[i].text}</p>`)
         }
         
         this.navigationCell.hideHeader();
@@ -148,7 +146,6 @@ class Wizard {
      * @param {Function} pageObject.previous The page object's previous function
      */
     setItem(pageObject) {
-        this._itemsMap[pageObject.id].next = pageObject.next;
-        this._itemsMap[pageObject.id].previous = pageObject.previous;
+        this._itemsMap[pageObject.id] = {next : pageObject.next, previous : pageObject.previous, ...pageObject};
     }
 }
