@@ -2,11 +2,11 @@ class WizardPage {
     /**
      * Returns a wizard page
      * @param {String} id ID of the wizard page
-     * @param {Object} parent Parent carousel cell object
+     * @param {Wizard} parentWizard Parent Wizard
      */
-    constructor(id, parent) {
+    constructor(id, parentWizard) {
         this.id = id;
-        this.parent = parent;
+        this.parentWizard = parentWizard;
     }
 
     /**
