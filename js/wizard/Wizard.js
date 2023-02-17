@@ -100,21 +100,34 @@ class Wizard {
         this.navigationForm.attachEvent("onButtonClick", function(name) {
             let currentId = _self.contentCarousel.getActiveId();
             let currentObject = _self._itemsMap[currentId];
+            let nextActiveItem = "";
+            
+            // Switch to the next or previous in sidebar
             if (name == "next") {
                 if (currentObject.next()) {
                     _self.sidebar.goToNextItem(false);
-                    _self.contentCarousel.goNext();
+                    nextActiveItem = _self.sidebar.getActiveItem();
                 }
             } else if (name == "previous") {
                 if (currentObject.previous()) {
                     _self.sidebar.goToPrevItem(false);
-                    _self.contentCarousel.goPrev();
+                    nextActiveItem = _self.sidebar.getActiveItem();
                 }
             }
+
+            // switch to the next or previous in carousel
+            _self.contentCarousel.cells(nextActiveItem).setActive();
+
         });
         this.sidebar.attachEvent("onBeforeSelect", function(id, lastId) {
             return false;
         });
+
+        this.contentCarousel.attachEvent("onSelect", function(id) {
+            console.log(`Selected id: ${id}`);
+        })
+
+        // this.wizardWindow.hide();
     }
     /**
      * Appends an element in the last of the wizard
