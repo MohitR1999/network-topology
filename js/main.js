@@ -84,10 +84,10 @@ const wizardItems = [
 ]
 
 let wizard = new Wizard("Create BGP", wizardConfig, wizardItems);
-let generalAttributes = new GeneralAttributesPage("general_attributes", wizard.getCellById("general_attributes"));
-let endPointSelection = new WizardPage("endpoint_selection", wizard.getCellById("endpoint_selection"));
-let topologySelection = new TopologySelection("topology_selection", wizard.getCellById("topology_selection"));
-let vrfSelection = new VRFConfiguration("vrf_selection", wizard.getCellById("vrf_selection"));
+let generalAttributes = new GeneralAttributesPage("general_attributes", wizard);
+let endPointSelection = new WizardPage("endpoint_selection", wizard);
+let topologySelection = new TopologySelection("topology_selection", wizard);
+let vrfSelection = new VRFConfiguration("vrf_selection", wizard);
 wizard.setItem(generalAttributes);
 wizard.setItem(endPointSelection);
 wizard.setItem(topologySelection);

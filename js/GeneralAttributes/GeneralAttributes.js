@@ -2,12 +2,12 @@ class GeneralAttributesPage extends WizardPage {
     /**
      * Returns an object of General Attributes page
      * @param {String} id Unique ID of the page 
-     * @param {Object} parent HTML element that would contain all the content of the wizard page
+     * @param {Wizard} parentWizard Parent wizard
      */
-    constructor(id, parent) {
-        super(id, parent);
+    constructor(id, parentWizard) {
+        super(id, parentWizard);
         const _self = this;
-        this.layout = new dhtmlXLayoutObject(parent, "1C");
+        this.layout = new dhtmlXLayoutObject(parentWizard.getCellById(id), "1C");
         this.contentCell = this.layout.cells("a");
         this.contentCell.hideHeader();
         this.form = this.contentCell.attachForm([
@@ -45,10 +45,10 @@ class GeneralAttributesPage extends WizardPage {
             if (name === "vrf_configuration") {
                 if (state == true) {
                     // show VRF page
-                    wizard.sidebar.cells("vrf_selection").show();
+                    _self.parentWizard.sidebar.cells("vrf_selection").show();
                 } else {
                     // hide VRF page
-                    wizard.sidebar.cells("vrf_selection").hide();
+                    _self.parentWizard.sidebar.cells("vrf_selection").hide();
                 }
             }
         })

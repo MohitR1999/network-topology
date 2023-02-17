@@ -1,7 +1,7 @@
 class VRFConfiguration extends WizardPage {
-    constructor(id, parent) {
-        super(id, parent);
-        this.layout = new dhtmlXLayoutObject(parent, "1C");
+    constructor(id, parentWizard) {
+        super(id, parentWizard);
+        this.layout = new dhtmlXLayoutObject(parentWizard.getCellById(id), "1C");
         this.layout.cells("a").setText("VRF Configuration");
     }
 }
